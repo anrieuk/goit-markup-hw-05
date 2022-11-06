@@ -23,8 +23,8 @@
                     <nav class="navigation">
                         <!-- Навігація на інші сторінки -->
                         <ul class="navigation-menu">
-                            <li><a class="current" href="./index.html">Студія</a></li>
-                            <li><a href="./portfolio.html">Портфоліо</a></li>
+                            <li><a class="navigation-link current" href="./index.html">Студія</a></li>
+                            <li><a class="navigation-link " href="./portfolio.html">Портфоліо</a></li>
                             <li><a href="#">Контакти</a></li>
                         </ul>
                     </nav>
@@ -54,8 +54,18 @@
         <section class="main-page">
             <div class="container main-container">
             <h1 class="slogan">Ефективні рішення для <br>вашого бізнесу</br> </h1>
-            <button type="button" class="button-action"> Замовити послугу </button>
+            <button data-modal-open type="button" class="button-action"> Замовити послугу </button>
         </div> 
+        <div class="backdrop is-hidden" data-modal >
+        <div class="modal">
+            <button data-modal-close type="button" class="modal-close">
+            <svg class="modal-close-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+            </button>
+        </div>
+        </div>
+
         </section>
 
         <section class="features section">
@@ -102,9 +112,18 @@
             <div class="container ">
                 <h2 class="title-our-team">Чим ми займаємося </h2>
                 <ul class="action">
-                <li> <img src="./images/box1.jpg" alt="Програмування" width="370" height="295"> </li>
-                <li><img src="./images/box2.jpg" alt="Мобільний телефон та Ноутбук" width="370" height="295"></li>
-                <li><img src="./images/box3.jpg" alt="Планшет" width="370" height="295"></li>
+                <li><div class="action-label">
+                    <img src="./images/box1.jpg" alt="Програмування" width="370" height="295">
+                 <p class="label">Десктопні додатки</p></div>
+                </li>
+                <li><div class="action-label">
+                    <img src="./images/box2.jpg" alt="Мобільний телефон та Ноутбук" width="370" height="295">
+                <p class="label">Мобільні додатки</p></div>
+                </li>
+                <li><div class="action-label">
+                    <img src="./images/box3.jpg" alt="Планшет" width="370" height="295">
+                <p class="label">Дизайнерські рішення</p></div>
+                </li>
                 </ul>
             </div>
         </section>
@@ -288,6 +307,7 @@
 
         </div>
     </footer>
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
